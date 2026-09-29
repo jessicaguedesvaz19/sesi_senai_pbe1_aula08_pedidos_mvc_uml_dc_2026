@@ -1,54 +1,52 @@
 const clientes = require("../../dados/clientes.json")
 
-const criar  = (req, res) => {
+const criar = (req, res) => { 
     const dados = req.body
-    dados.id = Number(clientes[clientes.length - 1].id) + 1//autoIncrement
+    dados.id = Number(clientes[clientes.length - 1].id + 1) //AutoIncrement
     clientes.push(dados)
     res.status(201).json(dados)
 }
-const listar  = (req, res) => {
+
+const listar = (req, res) => { 
     res.json(clientes)
 }
-const alterar  = (req, res) => {
-    const id = req.query.id
+
+const alterar = (req, res) => { 
+    const id = req.params.id
     const dados = req.body
     let status = 0
 
     clientes.forEach((cliente) => {
-        if (cliente.id == id) {
+        if(cliente.id == id){
+            cliente.produto = dados.produto
+            cliente.preco = dados.preco
+            cliente.quantidade = dados.quantidade
             status = 1
-            cliente.id = dados.id
-            cliente.cpf = dados.cpf
-            cliente.nome = dados.nome
         }
     })
-
-    if (status == 1) {
-        res.status(200).send("Cliente atualizado com sucesso!")
-    } else {
-        res.status(404).send("Cliente não encontrado")
+    if(status == 1) {
+        res.send("Cliente atualizado com sucesso")
+    }else{
+        res.status(404).send("Erro ao atualizar cliente")
     }
 }
 
-
-const excluir  = (req, res) => {
-
-
+const excluir = (req, res) => { 
     const id = req.params.id
     let status = 0
 
     clientes.forEach((cliente, indice) => {
-        if (pedido.id == id) {
-            status = 1
-            clientes.splice(indice, 1)
-        }
+       if(cliente.id == id){
+        status = 1
+        clientes.splice(indice, 1)
+       }
     })
-
-    if (status == 1) {
-        res.status(200).send("Cliente Excluído com Sucesso")
-    } else {
-        res.status(404).send("Cliente não encontrado")
+    if(status == 1) {
+        res.send("Cliente excluido com sucesso")
+    }else{
+        res.status(404).send("Erro ao excluir cliente")
     }
+
 }
 
 module.exports = {

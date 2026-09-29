@@ -23,5 +23,21 @@ Back-end com duas coleções mockup JSON clientes e pedidos, CRUD, para aprender
  npm run dev
 ```
 
+## Testes: 
+
+ - POST: 
+
+Clientes(Alterar)
+![ClientesAlterar](./testes/Alterar_clientes.png)
+Pedidos(Alterar)
+![PedidosAlterar](./testes/Excluir_clientes.png)
+
+- DELETE:
+
+Clientes(Excluir)
+![ClientesExcluir](./testes/Excluir_clientes.png)
+Pedidos(Excluir)
+![PedidosExcluir](./testes/Excluir_pedidos.png)
+
 
 
