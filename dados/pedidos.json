@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "cliente_id": 1,
+        "produto": "Sérum Vitamina C",
+        "preco": 60,
+        "quantidade": 1
+    },
+    {
+        "id": 2,
+        "cliente_id": 1,
+        "produto": "Protetor Solar FPS 40",
+        "preco": 80,
+        "quantidade": 2
+    },
+    {
+        "id": 3,
+        "cliente_id": 2,
+        "produto": "Hidratante em gel",
+        "preco": 40,
+        "quantidade": 1
+    },
+    {
+        "id": 4,
+        "cliente_id": 3,
+        "produto": "Água Micelar",
+        "preco": 50,
+        "quantidade": 2
+    }
+]

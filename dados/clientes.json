@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "cpf": "123.456.789-02",
+        "nome": "Ivone Silva"
+    },
+    {
+        "id": 2,
+        "cpf": "987.654.432-34",
+        "nome": "Maria Carvalho"
+    },
+    {
+        "id": 3,
+        "cpf": "354.356.754-62",
+        "nome": "Igor Pereira"
+    }
+]
