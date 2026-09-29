@@ -25,12 +25,12 @@ Back-end com duas coleções mockup JSON clientes e pedidos, CRUD, para aprender
 
 ## Testes: 
 
- - POST: 
+ - PUT: 
 
 Clientes(Alterar)
 ![ClientesAlterar](./testes/Alterar_clientes.png)
 Pedidos(Alterar)
-![PedidosAlterar](./testes/Excluir_clientes.png)
+![PedidosAlterar](./testes/Alterar_pedidos.png)
 
 - DELETE:
 
