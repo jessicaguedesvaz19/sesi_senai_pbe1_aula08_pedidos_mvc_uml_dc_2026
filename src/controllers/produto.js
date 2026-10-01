@@ -1,14 +1,14 @@
-const pedidos = require("../../dados/pedidos.json")
+const produtos = require("../../dados/produtos.json")
 
 const criar = (req, res) => {
     const dados = req.body
-    dados.id = Number(pedidos[pedidos.length - 1].id) + 1
-    pedidos.push(dados)
+    dados.id = Number(produtos[produtos.length - 1].id) + 1
+    produtos.push(dados)
     res.status(201).json(dados)
 }
 
 const listar = (req, res) => {
-    res.json(pedidos)
+    res.json(produtos)
 }
 
 const excluir = (req, res) => {
@@ -23,9 +23,9 @@ const excluir = (req, res) => {
     })
 
     if (status == 1) {
-        res.send("Pedido excluido com sucesso")
+        res.send("Produto excluido com sucesso")
     } else {
-        res.status(404).send("Erro ao excluir Pedido")
+        res.status(404).send("Erro ao excluir Produto")
     }
 }
 
@@ -35,16 +35,16 @@ const alterar = (req, res) => {
 
     const chaves = Object.keys(dados)
 
-    const pedido = pedidos.find(item => item.id === id)
+    const produto = produtos.find(item => item.id === id)
 
-    if (pedido) {
+    if (produto) {
         chaves.forEach(chave => {
-            pedido[chave] = dados[chave]
+            produto[chave] = dados[chave]
         })
 
-        res.send("Pedido atualizado com sucesso")
+        res.send("Produto atualizado com sucesso")
     } else {
-        res.status(404).send("Erro ao atualizar Pedido")
+        res.status(404).send("Erro ao atualizar Produto")
     }
 }
 
